@@ -19,11 +19,11 @@ $produtos = $gw->all();
     <title>Mercadorias</title>
 </head>
 <body>
-        <div class="col-md-6">
+        <div class="col-md-7">
             <h1><a href="criar.html"><input class="btn btn-primary" type="submit" value=" + "></a></h1>
         </div>
-<table class="table">
-    <thead>
+<table class="table ">
+    <thead class="thead-dark">
     <tr>
         <th scope="col">#</th>
         <th scope="col">Descrição</th>
@@ -45,7 +45,7 @@ $produtos = $gw->all();
         ?>
         <tr>
             <th scope="row"><?=$produto->id?></th>
-            <td><?=$produto->descricao?></td>
+            <td id="descri"><?=$produto->descricao?></td>
             <td><?=$produto->estoque?></td>
             <td><?=$produto->preco_custo?></td>
             <td><?=$produto->preco_venda?></td>
@@ -53,7 +53,7 @@ $produtos = $gw->all();
             <td><?=$produto->data_cadastro?></td>
             <td><?=$produto->origem?></td>
             <td><a href="apagar.php?id=<?=$produto->id?>">Apagar</a></td>
-            <td><a href="alterar.php?id=<?=$produto->id?>">Alterar</a></td>
+            <td><a href="alterardados.php?id=<?=$produto->id?>">Alterar</a></td>
         </tr>
     <?php } ?>
     </tbody>
